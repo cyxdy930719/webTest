@@ -77,6 +77,7 @@ public class JdbcUntil {
         List<T> lists = new ArrayList<>();
         Connection conn=null;
         PreparedStatement pstmt = null;
+        ResultSet rs = null;
         conn=getConnection();
         try {
             pstmt=conn.prepareStatement(sql);
@@ -85,13 +86,15 @@ public class JdbcUntil {
                     pstmt.setObject(i+1,obj[i]);
                 }
             }
-            ResultSet rs=pstmt.executeQuery();
+            rs=pstmt.executeQuery();
             while(rs.next()){
                 T t=rm.RowMapping(rs);
                 lists.add(t);
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally {
+            close(rs,pstmt,conn);
         }
         return lists;
     }
