@@ -19,12 +19,14 @@ public class DoUpdateServlet extends HttpServlet {
         double price = Double.parseDouble(req.getParameter("price"));
         String des = req.getParameter("des");
         String url = req.getParameter("url");
+        int id =Integer.parseInt(req.getParameter("id"));
         Product p = new Product();
+        p.setProduct_id(id);
         p.setProduct_name(name);
         p.setPrice(price);
         p.setProduct_des(des);
         p.setUrl(url);
-        service.add(p);
+        service.update(p);
         resp.sendRedirect("list");
     }
 }
