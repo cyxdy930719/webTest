@@ -1,8 +1,8 @@
 package com.neuedu.controller;
 
-import pojo.User;
-import service.IUserService;
-import service.UserServiceImpl;
+import com.neuedu.pojo.User;
+import com.neuedu.service.IUserService;
+import com.neuedu.service.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

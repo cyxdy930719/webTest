@@ -1,8 +1,8 @@
-package dao;
+package com.neuedu.dao;
 
-import pojo.Product;
-import untilTest.JdbcUntil;
-import untilTest.RowMap;
+import com.neuedu.pojo.Product;
+import com.neuedu.untilTest.JdbcUntil;
+import com.neuedu.untilTest.RowMap;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -57,6 +57,11 @@ public class ProductDaoImpl implements IProductDao {
                 return p;
             }
         }, id);
+    }
+
+    @Override
+    public int update(Product product) {
+        return JdbcUntil.executeUpdate("update product set product_name=?,price=?,product_des=?,url=? where product_id=?",product.getProduct_name(),product.getPrice(),product.getProduct_des(),product.getUrl(),product.getProduct_id());
     }
 
 }

@@ -1,4 +1,4 @@
-package pojo;
+package com.neuedu.pojo;
 
 public class User {
     private int id;

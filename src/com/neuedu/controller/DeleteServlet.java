@@ -1,7 +1,7 @@
 package com.neuedu.controller;
 
-import service.IProductService;
-import service.ProductServiceImpl;
+import com.neuedu.service.IProductService;
+import com.neuedu.service.ProductServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

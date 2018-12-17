@@ -1,6 +1,6 @@
-package dao;
+package com.neuedu.dao;
 
-import pojo.Product;
+import com.neuedu.pojo.Product;
 
 import java.util.List;
 
@@ -9,4 +9,5 @@ public interface IProductDao {
     public int add(Product product);
     public int delete(int id);
     public Product getOne(int id);
+    public int update(Product product);
 }

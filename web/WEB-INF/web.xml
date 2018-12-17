@@ -27,14 +27,14 @@
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
-    <servlet>
+    <!--<servlet>
         <servlet-name>doregister</servlet-name>
         <servlet-class>com.neuedu.controller.DoRegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>doregister</servlet-name>
         <url-pattern>/doregister</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
     <servlet>
         <servlet-name>list</servlet-name>
         <servlet-class>com.neuedu.controller.ListServlet</servlet-class>
@@ -43,6 +43,14 @@
         <servlet-name>list</servlet-name>
         <url-pattern>/list</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>charset</filter-name>
+        <filter-class>com.neuedu.filter.CharsetFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>charset</filter-name>
+        <url-pattern>/charset</url-pattern>
+    </filter-mapping>
 <!--    <servlet>
         <servlet-name>controller</servlet-name>
         <servlet-class>com.neuedu.controlrol.TestServlet</servlet-class>

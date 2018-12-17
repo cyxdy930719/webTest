@@ -1,8 +1,10 @@
-package service;
+package com.neuedu.service;
 
-import dao.IUserDao;
-import dao.UserDaoImpl;
-import pojo.User;
+import com.neuedu.dao.IUserDao;
+import com.neuedu.dao.UserDaoImpl;
+import com.neuedu.pojo.User;
+
+import java.util.List;
 
 public class UserServiceImpl  implements IUserService{
     private IUserDao dao =new UserDaoImpl();
@@ -14,5 +16,10 @@ public class UserServiceImpl  implements IUserService{
     @Override
     public User getOne(String username) {
         return dao.getOne(username);
+    }
+
+    @Override
+    public List<User> getLists() {
+        return dao.getLists();
     }
 }

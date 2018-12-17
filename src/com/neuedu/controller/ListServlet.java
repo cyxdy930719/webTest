@@ -1,8 +1,8 @@
 package com.neuedu.controller;
 
-import pojo.Product;
-import service.IProductService;
-import service.ProductServiceImpl;
+import com.neuedu.pojo.Product;
+import com.neuedu.service.IProductService;
+import com.neuedu.service.ProductServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

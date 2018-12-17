@@ -1,5 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="pojo.Product" %>
+<%@ page import="com.neuedu.pojo.Product" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><%--
   Created by IntelliJ IDEA.
   User: hasee

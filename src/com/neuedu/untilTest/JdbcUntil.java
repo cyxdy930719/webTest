@@ -1,4 +1,4 @@
-package untilTest;
+package com.neuedu.untilTest;
 import com.mysql.jdbc.Driver;
 
 import java.sql.*;

@@ -1,11 +1,12 @@
-package dao;
+package com.neuedu.dao;
 
-import pojo.User;
-import untilTest.JdbcUntil;
-import untilTest.RowMap;
+import com.neuedu.pojo.User;
+import com.neuedu.untilTest.JdbcUntil;
+import com.neuedu.untilTest.RowMap;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class UserDaoImpl implements IUserDao {
 
@@ -31,4 +32,22 @@ public class UserDaoImpl implements IUserDao {
             }
         }, username);
     }
+
+    @Override
+    public List<User> getLists() {
+        return JdbcUntil.executeQuery("select username from user", new RowMap<User>() {
+            @Override
+            public User RowMapping(ResultSet rs) {
+                User u = new User();
+                try {
+                    u.setUsername(rs.getString("username"));
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        }, null);
+    }
+
+
 }

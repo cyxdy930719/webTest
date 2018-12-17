@@ -1,4 +1,4 @@
-package pojo;
+package com.neuedu.pojo;
 
 public class Product {
     private int product_id;

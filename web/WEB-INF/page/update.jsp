@@ -12,7 +12,7 @@
 </head>
 <body>
 <form action="doupdate">
-    <input type="text" hidden="hidden" value="${p.product_id}"><br>
+    <input type="text" hidden="hidden" name="id" value="${p.product_id}"><br>
     商品名称：<input type="text" name="name" value="${p.product_name}"><br>
     商品价格：<input type="text" name="price" value="${p.price}"><br>
     商品描述：<input type="text" name="des" value="${p.product_des}"><br>
